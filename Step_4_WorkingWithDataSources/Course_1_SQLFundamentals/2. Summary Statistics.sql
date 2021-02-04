@@ -8,15 +8,15 @@ LIMIT 3;
 SELECT MIN(ShareWomen) 
 FROM recent_grads;
   
--- Query that returns the lowest unemployment rate
+--2. Query that returns the lowest unemployment rate
 SELECT MIN(Unemployment_rate)
 FROM recent_grads;
 
--- Query that computes the sum of the Total column
+--3. Query that computes the sum of the Total column
 SELECT SUM(Total)
 FROM recent_grads;
 
--- How many majors included mostly women
+--4. How many majors included mostly women
 SELECT COUNT(Major)
 FROM recent_grads
 WHERE ShareWomen > 0.5;
@@ -26,7 +26,7 @@ SELECT COUNT(Major)
 FROM recent_grads
 WHERE ShareWomen < 0.5;
 
--- Query to find a column that has at least one missing value.
+--5. Query to find a column that has at least one missing value.
 SELECT COUNT(*), COUNT(Unemployment_rate)
 FROM recent_grads;
   
@@ -58,6 +58,11 @@ COUNT(DISTINCT Major_code) AS unique_major_codes
 FROM recent_grads;
 
 -- 9. Data Types
+--https://www.sqlite.org/datatype3.html
+SELECT Major, Total, Men, Women, Unemployment_rate
+  FROM recent_grads
+ ORDER BY Unemployment_rate DESC
+ LIMIT 3;
 
 -- 10. String Functions And Operations
 SELECT Major,

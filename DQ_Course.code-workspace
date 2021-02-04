@@ -6,6 +6,7 @@
 	],
 	"settings": {
 		"jupyter.jupyterServerType": "local",
-		"kite.developerMode": true
+		"kite.developerMode": true,
+		"python.pythonPath": "c:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python37\\python.exe"
 	}
 }

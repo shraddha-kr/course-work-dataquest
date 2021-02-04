@@ -8,7 +8,7 @@ SELECT Major, Rank,
 	   END AS rank_category
 FROM recent_grads;
 
--- We'll categorize the Sample_size column into three categories: Small, Medium, and Large.
+--3. We'll categorize the Sample_size column into three categories: Small, Medium, and Large.
 SELECT CASE
        WHEN Sample_size < 200 THEN 'Small'
        WHEN Sample_size < 1000 THEN 'Medium'
